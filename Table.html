@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td,th{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table style="border-collapse: collapse; font-family: &#39;Courier New&#39;, Courier, monospace;" border="1px width">
+        
+        <thead>
+            <tr><td style="text-align: center;" colspan="3">MY Daily Schedule</td></tr>
+            <tr>
+            <th>&nbsp;</th>
+            <th>Time</th>
+            <th>Activity</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Morning</th>
+                <td>8am - 11am</td>
+                <td>Write Code</td>
+            </tr>
+            <tr>
+                <th>Break</th>
+                <td>11am - 12pm</td>
+                <td>Eat Lunch</td>
+            </tr>
+            <tr>
+                <th>Afternoon</th>
+                <td>12pm - 5pm</td>
+                <td>Study for Other Courses</td>
+            </tr>
+            <tr>
+                <th>Evening</th>
+                <td rowspan="2">All Other Times</td>
+                <td>Free Time</td>
+            </tr>
+            <tr>
+                <th>Night</th>
+                <td>Sleep</td>
+            </tr>
+            <tr><td colspan="3">And that's what I do every day, 5 days a week. Just eat, sleep, code ..and recharge!</td></tr>
+        </tbody>
+    </table>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
