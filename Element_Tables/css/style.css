@@ -1,0 +1,13 @@
+.css td,th{
+    padding: 20px;
+}
+
+.css2 td,th{
+    text-align: center;
+    padding: 10px 30px;
+}
+
+img{
+    padding-right:30px ;
+    width: 100px;
+}

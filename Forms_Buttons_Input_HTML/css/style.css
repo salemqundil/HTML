@@ -1,0 +1,12 @@
+
+.first td{
+    text-align: end;
+    padding: 5px;
+}
+
+.second td{
+    padding: 5px;
+}
+.second2 td,th{
+    padding:5px;
+}
